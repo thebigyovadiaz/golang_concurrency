@@ -1,6 +1,6 @@
 package main
 
-import "github.com/thebigyovadiaz/golang_concurrency/ep5"
+import "github.com/thebigyovadiaz/golang_concurrency/ep6"
 
 func main() {
 	// GolangConcurrency EP1
@@ -16,5 +16,8 @@ func main() {
 	// ep4.EP4()
 
 	// GolangConcurrency EP5
-	ep5.EP5()
+	// ep5.EP5()
+
+	// GolangConcurrency EP6
+	ep6.EP6()
 }
