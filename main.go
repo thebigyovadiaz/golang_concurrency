@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/thebigyovadiaz/golang_concurrency/ep7"
+	"github.com/thebigyovadiaz/golang_concurrency/ep9"
 )
 
 func main() {
@@ -23,6 +23,12 @@ func main() {
 	// GolangConcurrency EP6
 	// ep6.EP6()
 
-	// GolangConcurrency EP6
-	ep7.EP7()
+	// GolangConcurrency EP7
+	// ep7.EP7()
+
+	// GolangConcurrency EP8
+	// ep8.EP8()
+
+	// GolangConcurrency EP9
+	ep9.EP9()
 }
