@@ -6,31 +6,40 @@ import (
 )
 
 func EP10() {
-	arr := []int{-15, -7, -9, -14, -12}
+	arr := []int{-1, -7, -1, 5, 1}
 	numb := computeClosestToZero(arr)
 	fmt.Println("number: ", numb)
 }
 
+// computeClosestToZero find a number near zero
 func computeClosestToZero(ts []int) int {
-	nearPositive := 1
-	nearNegative := -1
-	zero := 0
+	var numb, key int
 
 	fmt.Println(ts)
 
-	for _, v := range ts {
-		if v < zero && v <= nearPositive {
-			nearNegative = v
-		} else if v >= zero && v <= nearPositive {
-			nearPositive = v
+	for k, v := range ts {
+		nABS := int(math.Abs(float64(v)))
+
+		if k == 0 {
+			numb = nABS
+			key = k
+		} else {
+			if numb > nABS {
+				numb = nABS
+				key = k
+			} else if numb == nABS && ts[key] < v {
+				key = k
+			} else {
+				numb = nABS
+				key = k
+			}
 		}
 	}
 
-	absNeg := int(math.Abs(float64(nearNegative)))
-
-	if absNeg == nearPositive {
-		return nearPositive
+	if len(ts) == 0 {
+		return 0
 	}
 
-	return -1
+	fmt.Println("numb:", numb, key)
+	return ts[key]
 }
